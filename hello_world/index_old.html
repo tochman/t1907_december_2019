@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    .header {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 50px;
+      color: blueviolet;
+    }
+  </style>
+  <div id="display"></div>
+  <button onclick="alert('You clicked me!')">Click me</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // this code will be executed once the page has loaded
+      let displayElement = document.getElementById('display')
+
+      setTimeout(() => {
+        displayElement.innerHTML = '<h1>Hello Informator Students!</h1>'
+        displayElement.classList.add('header')
+      }, 1000)
+    }) 
+  </script>
+
+</body>
+
+</html>
