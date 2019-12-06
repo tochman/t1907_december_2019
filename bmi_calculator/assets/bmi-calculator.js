@@ -12,17 +12,20 @@ const calculateMetricBMI = (weight, height) => {
 // Extreme Obesity Class 3	>40
 
 const getBMIMessage = bmiValue => {
-  if (bmiValue < 18.5) {
-    return 'Underweight'
-  } else if (bmiValue > 18.5 && bmiValue < 24.9) {
-    return 'Normal weight'
-  } else if (bmiValue > 25 && bmiValue < 29.9) {
-    return 'Overweight'
-  } else if (bmiValue > 30 && bmiValue < 34.9) {
-    return 'Obesity Class 1'
-  } else if (bmiValue > 35 && bmiValue < 39.9) {
-    return 'Obesity Class 2'
-  } else if (bmiValue > 40 ) {
-    return 'Extreme Obesity Class 3'
+  switch (true) {
+    case (bmiValue < 18.5):
+      return 'Underweight'
+    case (bmiValue < 25):
+      return "Normal weight"
+    case (bmiValue < 30):
+      return 'Overweight'
+    case (bmiValue < 35):
+      return 'Obesity Class 1'
+    case (bmiValue < 40.1):
+      return 'Obesity Class 2'
+    default:
+      return 'Extreme Obesity Class 3'
   }
-}
+};
+
+
