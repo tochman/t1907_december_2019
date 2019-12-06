@@ -3,13 +3,10 @@ const calculateMetricBMI = (weight, height) => {
   return results.toFixed(2)
 }
 
-// BMI Classification	
-// Underweight	<18.5
-// Normal weight	18.5-24.9
-// Overweight	25-29.9
-// Obesity Class 1	30-34.9
-// Obesity Class 2	35-39.9
-// Extreme Obesity Class 3	>40
+const calculateImperialBMI = (weight, height) => {
+  let results = (parseInt(weight) * 703) / (parseInt(height) * parseInt(height))
+  return results.toFixed(2)
+}
 
 const getBMIMessage = bmiValue => {
   switch (true) {
@@ -18,7 +15,7 @@ const getBMIMessage = bmiValue => {
     case (bmiValue < 25):
       return "Normal weight"
     case (bmiValue < 30):
-      return 'Overweight'
+      return 'you are Overweight'
     case (bmiValue < 35):
       return 'Obesity Class 1'
     case (bmiValue < 40.1):

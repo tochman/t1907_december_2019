@@ -10,7 +10,12 @@
 </head>
 
 <body onkeydown="handlePress()">
-  <h1>BMI Calculator</h1>
+  <h1>Amazing BMI Calculator</h1>
+  <div>
+    <input type="radio" name="method" id="" value="metric" checked>Metric</input>
+    <input type="radio" name="method" id="" value="imperial">Imperial</input>
+  </div>
+
   <input type="number" id="weight" placeholder="Your weight in kg">
   <input type="number" id="height" placeholder="Your height in cm">
   <button onclick="calculateBMI()">Calculate</button>
